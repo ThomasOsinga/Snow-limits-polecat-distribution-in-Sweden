@@ -34,7 +34,7 @@ setwd("D:/Stage/Modelling/R_MAXENT/Gaan we weer")
 
 #-------------------------------------------------------------------------------
 # preparing data
-## splitting training and testing records (complete the code)
+## splitting training and testing records 
 help(kuenm_occsplit)
 
 occs <- read.csv("occ_Mustela.csv")
@@ -43,7 +43,7 @@ set.seed(1)
 split <- kuenm_occsplit(occ = occs, train.proportion = 0.8, method = "random",
                         save = TRUE, name = "occ")
 
-## preparing sets of variables (complete the code)
+## preparing sets of variables )
 help(kuenm_varcomb)
 
 vs <- kuenm_varcomb(var.dir = "Variables", out.dir = "M_variables", min.number = 4, 
@@ -54,7 +54,7 @@ vs <- kuenm_varcomb(var.dir = "Variables", out.dir = "M_variables", min.number =
 
 #-------------------------------------------------------------------------------
 # calibration
-## candidate model creation (complete the code)
+## candidate model creation 
 help(kuenm_cal)
 
 oj <- "occ_joint.csv"
@@ -72,11 +72,11 @@ kuenm_cal(occ.joint = oj, occ.tra = otr, M.var.dir = mvars,
           maxent.path = mxpath, wait = FALSE, run = TRUE)
 
 
-k## evaluation of candidate models (complete the code)
+k## evaluation of candidate models 
 help(kuenm_ceval)
 
 ote <- "occ_test.csv"
-cresdir <- "Calibration_results1"
+cresdir <- "Calibration_results"
 
 kuenm_ceval(path = candir, occ.joint = oj, occ.tra = otr, 
             occ.test = ote, batch = bcal, out.eval = cresdir,
@@ -86,11 +86,11 @@ kuenm_ceval(path = candir, occ.joint = oj, occ.tra = otr,
 
 
 #-------------------------------------------------------------------------------
-# model projections (complete the code)
+# model projections 
 help(kuenm_mod)
 
 bfmod <- "batch_model"
-moddir <- "Final_models1"
+moddir <- "Final_models"
 gvars <- "G_variables"
 
 kuenm_mod(occ.joint = oj, M.var.dir = mvars, out.eval = cresdir, 
@@ -104,7 +104,7 @@ kuenm_mod(occ.joint = oj, M.var.dir = mvars, out.eval = cresdir,
 
 
 #-------------------------------------------------------------------------------
-# independent evaluation (complete the code)
+# independent evaluation 
 help(kuenm_feval)
 
 kuenm_feval(path = moddir, occ.joint = oj, occ.ind = "Mustela_putorius_Validatation.csv", 
@@ -113,7 +113,7 @@ kuenm_feval(path = moddir, occ.joint = oj, occ.ind = "Mustela_putorius_Validatat
             
 
 #-------------------------------------------------------------------------------
-# evaluation of extrapolation risks (complete the code)
+# evaluation of extrapolation risks 
 help(kuenm_mmop)
 
 outmop <- "MOP_results"
