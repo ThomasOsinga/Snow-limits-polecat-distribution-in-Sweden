@@ -1,0 +1,115 @@
+#Plots
+
+Coniferousplot <- ggplot(Coniferoustotal, aes(x))+
+  geom_line(aes(y=y1, color = "Individual runs"))+
+  geom_line(aes(y=y2, color = "Individual runs"))+
+  geom_line(aes(y=y3, color = "Individual runs"))+
+  geom_line(aes(y=y4, color = "Individual runs"))+
+  geom_line(aes(y=y5, color = "Individual runs"))+
+  geom_line(aes(y=y6, color = "Individual runs"))+
+  geom_line(aes(y=y7, color = "Individual runs"))+
+  geom_line(aes(y=y8, color = "Individual runs"))+
+  geom_line(aes(y=y9, color = "Individual runs"))+
+  geom_line(aes(y=y10, color = "Individual runs"))+
+  geom_line(aes(y=Mean, color = "Mean"),size=2)+
+  xlab('Proportion Coniferous forest')+
+  ylab('Predicted suitability')+
+  theme_classic()+
+  scale_color_manual(values= c('Grey','Red', 'Blue'))
+
+Coniferousplot
+
+Humanfootprintplot <- ggplot(Humanfootprinttotal, aes(x))+
+  geom_line(aes(y=y1, color = "Individual runs"))+
+  geom_line(aes(y=y2, color = "Individual runs"))+
+  geom_line(aes(y=y3, color = "Individual runs"))+
+  geom_line(aes(y=y4, color = "Individual runs"))+
+  geom_line(aes(y=y5, color = "Individual runs"))+
+  geom_line(aes(y=y6, color = "Individual runs"))+
+  geom_line(aes(y=y7, color = "Individual runs"))+
+  geom_line(aes(y=y8, color = "Individual runs"))+
+  geom_line(aes(y=y9, color = "Individual runs"))+
+  geom_line(aes(y=y10, color = "Individual runs"))+
+  geom_line(aes(y=Mean, color = "Mean"),size=2)+
+  xlab('Human footprint index')+
+  ylab('Predicted suitability')+
+  theme_classic()+
+  scale_color_manual(values= c('Grey','Red', 'Blue'))
+
+Humanfootprintplot
+
+Openlandscapeplot <- ggplot(Openlandscapetotal, aes(x))+
+  geom_line(aes(y=y1, color = "Individual runs"))+
+  geom_line(aes(y=y2, color = "Individual runs"))+
+  geom_line(aes(y=y3, color = "Individual runs"))+
+  geom_line(aes(y=y4, color = "Individual runs"))+
+  geom_line(aes(y=y5, color = "Individual runs"))+
+  geom_line(aes(y=y6, color = "Individual runs"))+
+  geom_line(aes(y=y7, color = "Individual runs"))+
+  geom_line(aes(y=y8, color = "Individual runs"))+
+  geom_line(aes(y=y9, color = "Individual runs"))+
+  geom_line(aes(y=y10, color = "Individual runs"))+
+  geom_line(aes(y=Mean, color = "Mean"),size=2)+
+  xlab('Proportion openlandscape')+
+  ylab('Predicted suitability')+
+  theme_classic()+
+  scale_color_manual(values= c('Grey','Red', 'Blue'))
+
+Openlandscapeplot
+
+Snowdaysplot <- ggplot(Snowdaystotal, aes(x))+
+  geom_line(aes(y=y1, color = "Individual runs"))+
+  geom_line(aes(y=y2, color = "Individual runs"))+
+  geom_line(aes(y=y3, color = "Individual runs"))+
+  geom_line(aes(y=y4, color = "Individual runs"))+
+  geom_line(aes(y=y5, color = "Individual runs"))+
+  geom_line(aes(y=y6, color = "Individual runs"))+
+  geom_line(aes(y=y7, color = "Individual runs"))+
+  geom_line(aes(y=y8, color = "Individual runs"))+
+  geom_line(aes(y=y9, color = "Individual runs"))+
+  geom_line(aes(y=y10, color = "Individual runs"))+
+  geom_line(aes(y=Mean, color = "Mean"),size=2)+
+  xlab('Number of snowdays')+
+  ylab('Predicted suitability')+
+  theme_classic()+
+  scale_color_manual(values= c('Grey','Red', 'Blue'))
+
+Snowdaysplot
+
+Waterplot <- ggplot(Watertotal, aes(x))+
+  geom_line(aes(y=y1, color = "Individual runs"))+
+  geom_line(aes(y=y2, color = "Individual runs"))+
+  geom_line(aes(y=y3, color = "Individual runs"))+
+  geom_line(aes(y=y4, color = "Individual runs"))+
+  geom_line(aes(y=y5, color = "Individual runs"))+
+  geom_line(aes(y=y6, color = "Individual runs"))+
+  geom_line(aes(y=y7, color = "Individual runs"))+
+  geom_line(aes(y=y8, color = "Individual runs"))+
+  geom_line(aes(y=y9, color = "Individual runs"))+
+  geom_line(aes(y=y10, color = "Individual runs"))+
+  geom_line(aes(y=Mean, color = "Mean"),size=2)+
+  xlab('Proportion water surface')+
+  ylab('Predicted suitability')+
+  theme_classic()+
+  scale_color_manual(values= c('Grey','Red', 'Blue'))
+
+Waterplot
+
+Soilmoistureplot <- ggplot(Soilmoisturetotal, aes(x))+
+  geom_line(aes(y=y1, color = "Individual runs"))+
+  geom_line(aes(y=y2, color = "Individual runs"))+
+  geom_line(aes(y=y3, color = "Individual runs"))+
+  geom_line(aes(y=y4, color = "Individual runs"))+
+  geom_line(aes(y=y5, color = "Individual runs"))+
+  geom_line(aes(y=y6, color = "Individual runs"))+
+  geom_line(aes(y=y7, color = "Individual runs"))+
+  geom_line(aes(y=y8, color = "Individual runs"))+
+  geom_line(aes(y=y9, color = "Individual runs"))+
+  geom_line(aes(y=y10, color = "Individual runs"))+
+  geom_line(aes(y=Mean, color = "Mean"),size=2)+
+  xlab('Proportion Soilmoisture')+
+  ylab('Predicted suitability')+
+  theme_classic()+
+  scale_color_manual(values= c('Grey','Red', 'Blue'))
+
+Soilmoistureplot
