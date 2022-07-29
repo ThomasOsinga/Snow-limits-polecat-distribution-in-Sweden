@@ -1,8 +1,18 @@
-#dataprep for plots
-
-
+#Combining all plots for the analysis on south Sweden Supplementary files
+Reponsecurves_Suplementary_files_South <- ggarrange(Snowdaysplot, Coniferousplot, Humanfootprintplot, Openlandscapeplot, Soilmoistureplot, Waterplot,
+                                                    labels = c("a)", "b)", "c)", "d)", "f)", "g"),
+                                                    ncol = 3, nrow = 2)
+Reponsecurves_Suplementary_files_South 
 setwd("D:/Toegepaste Biologie Projecten/Stage/Modelling/R_MAXENT/South_maxent/plots")
 
+ggsave(filename = "Responsecurves Maintext.jpeg",
+       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       units =c("cm"),
+       width = 30,
+       height = 14.6,
+       dpi = 450)
+
+#dataprep for plots
 library(tidyverse)
 library(ggplot2)
 Coniferous1 <- read.csv('Mustela_putorius_0_coniferous_south.dat')

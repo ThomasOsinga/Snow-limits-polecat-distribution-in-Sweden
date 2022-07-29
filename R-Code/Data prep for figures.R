@@ -1,11 +1,12 @@
 #dataprep for plots
 
+install.packages("ggpubr")
 
-
-setwd("D:/Toegepaste Biologie Projecten/Stage/Modelling/R_MAXENT/Gaan we weer/Model for Plot Data/plots")
+setwd("D:/Toegepaste Biologie Projecten/Stage/Revision/Modelling/Final Models/Seed1/Final_models/M_0.5_F_lqp_Set_147_E/plots")
 
 library(tidyverse)
 library(ggplot2)
+library(ggpubr)
 Coniferous1 <- read.csv('Mustela_putorius_0_coniferous.dat')
 Coniferous2 <- read.csv('Mustela_putorius_1_coniferous.dat')
 Coniferous3 <- read.csv('Mustela_putorius_2_coniferous.dat')

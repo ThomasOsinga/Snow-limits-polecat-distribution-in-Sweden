@@ -1,9 +1,33 @@
+
+#Combinding all plots for figure 2 and supplementary files
+
+Reponsecurves_Maintext <- ggarrange(Snowdaysplot, Humanfootprintplot, Coniferousplot, Openlandscapeplot,
+                                    labels = c("a)", "b)", "c)", "d)"),
+                                    ncol = 2, nrow = 2)
+Reponsecurves_Maintext
+
+ggsave(filename = "Responsecurves Maintext.jpeg",
+       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       units =c("cm"),
+       width = 20,
+       height = 14.6,
+       dpi = 450)
+
+
+Reponsecurves_Suplementary_files <- ggarrange(Waterplot, Soilmoistureplot,
+                                    labels = c("a)", "b)"))
+                                    
+Reponsecurves_Suplementary_files
+
+ggsave(filename = "Responsecurves Supplementary files.jpeg",
+       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       units =c("cm"),
+       width = 20,
+       height = 7.7,
+       dpi = 450)
+
+
 #Plots
-mynamestheme <- theme(
-  plot.title = element_text(family = "Helvetica", face = "bold", size = (60)),
-  axis.title = element_text(family = "Helvetica", size = (20)),
-  axis.text = element_text(family = "Courier", size = (20))
-)
 Coniferousplot <- ggplot(Coniferoustotal, aes(x))+
   geom_line(aes(y=y1, color = "Individual runs"))+
   geom_line(aes(y=y2, color = "Individual runs"))+
@@ -16,15 +40,28 @@ Coniferousplot <- ggplot(Coniferoustotal, aes(x))+
   geom_line(aes(y=y9, color = "Individual runs"))+
   geom_line(aes(y=y10, color = "Individual runs"))+
   geom_line(aes(y=Mean, color = "Mean"),size=2)+
-  xlab('Proportion Coniferous forest')+
+  xlab('Proportion coniferous forest')+
   ylab('Predicted suitability')+
   theme_classic()+
-  theme(legend.position="none")+
-  ggtitle("B")+
+  theme(legend.position="none", axis.title = element_text(family = "Helvetica", size = (15)),
+          axis.text = element_text(family = "Courier", size = (15)))+
+
+
   scale_color_manual(values= c('Grey','Blue', 'Red'))
 
 Coniferousplot
 print(Coniferousplot + mynamestheme)
+
+
+ggsave(filename = "Coniferousplot.jpeg",
+  path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       units =c("cm"),
+       width = 20,
+       height = 12.6,
+       dpi = 300)
+
+
+
 
 Humanfootprintplot <- ggplot(Humanfootprinttotal, aes(x))+
   geom_line(aes(y=y1, color = "Individual runs"))+
@@ -41,12 +78,20 @@ Humanfootprintplot <- ggplot(Humanfootprinttotal, aes(x))+
   xlab('Human footprint index')+
   ylab('Predicted suitability')+
   theme_classic()+
-  ggtitle("C")+
-  theme(legend.position="none")+
+  theme(legend.position="none", axis.title = element_text(family = "Helvetica", size = (15)),
+        axis.text = element_text(family = "Courier", size = (15)))+
+  
   scale_color_manual(values= c('Grey','Blue', 'Red'))
 
 Humanfootprintplot
 print(Humanfootprintplot + mynamestheme)
+
+ggsave(filename = "Humanfootprint.jpeg",
+       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       units =c("cm"),
+       width = 20,
+       height = 12.6,
+       dpi = 300)
 
 Openlandscapeplot <- ggplot(Openlandscapetotal, aes(x))+
   geom_line(aes(y=y1, color = "Individual runs"))+
@@ -60,15 +105,24 @@ Openlandscapeplot <- ggplot(Openlandscapetotal, aes(x))+
   geom_line(aes(y=y9, color = "Individual runs"))+
   geom_line(aes(y=y10, color = "Individual runs"))+
   geom_line(aes(y=Mean, color = "Mean"),size=2)+
-  xlab('Proportion openlandscape')+
+  xlab('Proportion open landscape')+
   ylab('Predicted suitability')+
   theme_classic()+
-  ggtitle("D")+
-  theme(legend.position="none")+
+  theme(legend.position="none", axis.title = element_text(family = "Helvetica", size = (15)),
+        axis.text = element_text(family = "Courier", size = (15)))+
+  
   scale_color_manual(values= c('Grey','Blue', 'Red'))
 
 Openlandscapeplot
 print(Openlandscapeplot + mynamestheme)
+
+ggsave(filename = "Openlandscape.jpeg",
+       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       units =c("cm"),
+       width = 20,
+       height = 12.6,
+       dpi = 300)
+
 
 Snowdaysplot <- ggplot(Snowdaystotal, aes(x))+
   geom_line(aes(y=y1, color = "Individual runs"))+
@@ -82,15 +136,25 @@ Snowdaysplot <- ggplot(Snowdaystotal, aes(x))+
   geom_line(aes(y=y9, color = "Individual runs"))+
   geom_line(aes(y=y10, color = "Individual runs"))+
   geom_line(aes(y=Mean, color = "Mean"),size=2)+
-  xlab('Number of snowdays')+
+  xlab('Number of snow days')+
   ylab('Predicted suitability')+
   theme_classic()+
-  ggtitle("A")+
-  theme(legend.position="none")+
+
+  theme(legend.position="none", axis.title = element_text(family = "Helvetica", size = (15)),
+        axis.text = element_text(family = "Courier", size = (15)))+
+  
   scale_color_manual(values= c('Grey','Blue', 'Red'))
 
 Snowdaysplot
 print(Snowdaysplot + mynamestheme)
+
+ggsave(filename = "Snowdays.jpeg",
+       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       units =c("cm"),
+       width = 20,
+       height = 12.6,
+       dpi = 300)
+
 
 Waterplot <- ggplot(Watertotal, aes(x))+
   geom_line(aes(y=y1, color = "Individual runs"))+
@@ -107,12 +171,20 @@ Waterplot <- ggplot(Watertotal, aes(x))+
   xlab('Water availability')+
   ylab('Predicted suitability')+
   theme_classic()+
-  ggtitle("G")+
-  theme(legend.position="none")+
+  theme(legend.position="none", axis.title = element_text(family = "Helvetica", size = (15)),
+        axis.text = element_text(family = "Courier", size = (15)))+
+  
   scale_color_manual(values= c('Grey','Blue', 'Red'))
 
 Waterplot
 print(Waterplot + mynamestheme)
+
+ggsave(filename = "Water availability2.jpeg",
+       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       units =c("cm"),
+       width = 20,
+       height = 12.6,
+       dpi = 300)
 
 Soilmoistureplot <- ggplot(Soilmoisturetotal, aes(x))+
   geom_line(aes(y=y1, color = "Individual runs"))+
@@ -129,9 +201,20 @@ Soilmoistureplot <- ggplot(Soilmoisturetotal, aes(x))+
   xlab('Proportion Soilmoisture')+
   ylab('Predicted suitability')+
   theme_classic()+
-  theme(legend.position="none")+
-  ggtitle("B")+
+  theme(legend.position="none", axis.title = element_text(family = "Helvetica", size = (15)),
+        axis.text = element_text(family = "Courier", size = (15)))+
+  
+
   scale_color_manual(values= c('Grey','Blue', 'Red'))
 
 Soilmoistureplot
 print(Soilmoistureplot + mynamestheme)
+
+
+ggsave(filename = "Soilmoisture.jpeg",
+       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       units =c("cm"),
+       width = 20,
+       height = 12.6,
+       dpi = 300)
+
