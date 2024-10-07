@@ -3,10 +3,10 @@ Reponsecurves_Suplementary_files_South <- ggarrange(Snowdaysplot, Coniferousplot
                                                     labels = c("a)", "b)", "c)", "d)", "f)", "g"),
                                                     ncol = 3, nrow = 2)
 Reponsecurves_Suplementary_files_South 
-setwd("D:/Toegepaste Biologie Projecten/Stage/Modelling/R_MAXENT/South_maxent/plots")
+setwd("~plots")
 
 ggsave(filename = "Responsecurves Maintext.jpeg",
-       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       path = "~plots",
        units =c("cm"),
        width = 30,
        height = 14.6,
