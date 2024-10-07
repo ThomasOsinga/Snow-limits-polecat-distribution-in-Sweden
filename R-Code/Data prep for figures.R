@@ -2,7 +2,7 @@
 
 install.packages("ggpubr")
 
-setwd("D:/Toegepaste Biologie Projecten/Stage/Revision/Modelling/Final Models/Seed1/Final_models/M_0.5_F_lqp_Set_147_E/plots")
+setwd("~/plots")
 
 library(tidyverse)
 library(ggplot2)
