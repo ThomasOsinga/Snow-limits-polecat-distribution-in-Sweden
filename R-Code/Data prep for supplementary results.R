@@ -6,7 +6,7 @@ Reponsecurves_Suplementary_files_South
 setwd("~plots")
 
 ggsave(filename = "Responsecurves Maintext.jpeg",
-       path = "~plots",
+       path = "~results",
        units =c("cm"),
        width = 30,
        height = 14.6,
