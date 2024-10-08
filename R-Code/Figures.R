@@ -7,7 +7,7 @@ Reponsecurves_Maintext <- ggarrange(Snowdaysplot, Humanfootprintplot, Coniferous
 Reponsecurves_Maintext
 
 ggsave(filename = "Responsecurves Maintext.jpeg",
-       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       path = "/plots",
        units =c("cm"),
        width = 20,
        height = 14.6,
@@ -20,7 +20,7 @@ Reponsecurves_Suplementary_files <- ggarrange(Waterplot, Soilmoistureplot,
 Reponsecurves_Suplementary_files
 
 ggsave(filename = "Responsecurves Supplementary files.jpeg",
-       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       path = "/plots",
        units =c("cm"),
        width = 20,
        height = 7.7,
@@ -54,7 +54,7 @@ print(Coniferousplot + mynamestheme)
 
 
 ggsave(filename = "Coniferousplot.jpeg",
-  path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+  path = "/plots",
        units =c("cm"),
        width = 20,
        height = 12.6,
@@ -87,7 +87,7 @@ Humanfootprintplot
 print(Humanfootprintplot + mynamestheme)
 
 ggsave(filename = "Humanfootprint.jpeg",
-       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       path = "/plots",
        units =c("cm"),
        width = 20,
        height = 12.6,
@@ -117,7 +117,7 @@ Openlandscapeplot
 print(Openlandscapeplot + mynamestheme)
 
 ggsave(filename = "Openlandscape.jpeg",
-       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       path = "/plots",
        units =c("cm"),
        width = 20,
        height = 12.6,
@@ -149,7 +149,7 @@ Snowdaysplot
 print(Snowdaysplot + mynamestheme)
 
 ggsave(filename = "Snowdays.jpeg",
-       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       path = "/plots",
        units =c("cm"),
        width = 20,
        height = 12.6,
@@ -180,7 +180,7 @@ Waterplot
 print(Waterplot + mynamestheme)
 
 ggsave(filename = "Water availability2.jpeg",
-       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       path = "/plots",
        units =c("cm"),
        width = 20,
        height = 12.6,
@@ -212,7 +212,7 @@ print(Soilmoistureplot + mynamestheme)
 
 
 ggsave(filename = "Soilmoisture.jpeg",
-       path = "D:/Toegepaste Biologie Projecten/Stage/Revision/Results/plots",
+       path = "/plots",
        units =c("cm"),
        width = 20,
        height = 12.6,
