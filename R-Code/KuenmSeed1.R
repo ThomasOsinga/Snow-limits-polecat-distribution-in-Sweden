@@ -29,7 +29,7 @@ library(kuenm)
 library(dplyr)
 library(devtools)
 # setting working directory (CHANGE IT ACCORDING TO YOUR NEEDS)
-setwd("D:/Toegepaste Biologie Projecten/Stage/Revision/Modelling/Final Models/Seed1")
+setwd()
 
 #-------------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ setwd("D:/Toegepaste Biologie Projecten/Stage/Revision/Modelling/Final Models/Se
 ## splitting training and testing records 
 help(kuenm_occsplit)
 
-occs <- read.csv("occ_Mustela.csv")
+occs <- read.csv("sighting used for analysis/occ_joint.csv")
 
 set.seed(1)
 split <- kuenm_occsplit(occ = occs, train.proportion = 0.8, method = "random",
@@ -48,7 +48,7 @@ split <- kuenm_occsplit(occ = occs, train.proportion = 0.8, method = "random",
 ## preparing sets of variables )
 help(kuenm_varcomb)
 
-vs <- kuenm_varcomb(var.dir = "Variables", out.dir = "M_variables", min.number = 4, 
+vs <- kuenm_varcomb(var.dir = "Covariates used for analysis", out.dir = "M_variables", min.number = 4, 
                     in.format = "ascii", out.format = "ascii")
 
 #-------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ bcal <- "batch_cal"
 candir <- "Candidate_models2"
 regm <- c(0.1, 0.25,0.5, 1, 2)
 fclas <- c("lq", "q", "lqp")
-mxpath <- "D:/Toegepaste Biologie Projecten/Stage/Programs/maxent"
+mxpath <- NULL #Path to maxentfolder
 
 kuenm_cal(occ.joint = oj, occ.tra = otr, M.var.dir = mvars, 
           batch = bcal, out.dir = candir, max.memory = 1000, 
@@ -109,7 +109,7 @@ kuenm_mod(occ.joint = oj, M.var.dir = mvars, out.eval = cresdir,
 # independent evaluation 
 help(kuenm_feval)
 
-kuenm_feval(path = moddir, occ.joint = oj, occ.ind = "Mustela_putorius_Validatation.csv", 
+kuenm_feval(path = moddir, occ.joint = oj, occ.ind = "Sightings used for analysis/Mustela_putorius_Validatation.csv", 
             replicates = TRUE, out.eval = "F_models_evaluation_5", threshold = 5, 
             rand.percent = 50, iterations = 500, parallel.proc = FALSE)
 
